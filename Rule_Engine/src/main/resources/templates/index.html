@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Evaluation Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Rule Engine</h1>
+
+    <!-- Form to create a rule -->
+    <div class="form-group">
+        <label for="rule">Enter Rule:</label>
+        <input type="text" id="rule" placeholder="e.g., (age > 30 AND department = 'Sales')">
+        <button id="createRuleBtn">Create Rule</button>
+    </div>
+
+    <!-- Combined rules -->
+    <div class="form-group">
+        <h2>Combined Rules</h2>
+        <textarea id="combinedRules" rows="5" placeholder="Rules will be combined here..." readonly></textarea>
+        <button id="combineRulesBtn">Combine Rules</button>
+    </div>
+
+    <!-- User Data for Evaluation -->
+    <div class="form-group">
+        <h2>Evaluate User Data</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter username">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age">
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" placeholder="Enter department">
+
+        <button id="evaluateBtn">Apply Rules</button>
+    </div>
+
+    <!-- Evaluation Result -->
+    <div class="form-group">
+        <h3>Evaluation Result: <span id="result"></span></h3>
+    </div>
+
+
+
+</div>
+    <div id="notification" class="notification" style="display:none;"></div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
